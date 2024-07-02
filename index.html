@@ -56,6 +56,7 @@
       border-collapse: collapse;
       width: 100%;
       margin: 20px; /* Space between box and table */
+      margin-right: 20px;
     }
     table, td, th {
       border: 1px solid #15284c; /* Border color for table cells */
@@ -67,6 +68,10 @@
     th {
       background-color: #15284c; /* Background color for table header cells */
       color: #f6f4ec; /* Text color for table header cells */
+    }
+    tr {
+      background-color: #f6f4e; /* Background color for table row cells */
+      color: #15284c; /* Text color for table header cells */
     }
   </style>
 </head>
@@ -84,6 +89,8 @@
     <table>
       <tr><th>Data Element</th><th>Definition</th><th>Value Set</th></tr>
       <tr><td>NHI number</td><td>National health identifier for the patient or consumer</td><td>NHI number</td></tr>
+      <tr><td>Person name</td><td>Current full name of the patient or consumer</td><td></td></tr>
+      <tr><td>Birth date</td><td>Date of birth of the patient or consumer</td><td>Date</td></tr>
     </table>
   </div>
   </div>
