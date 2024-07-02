@@ -40,13 +40,28 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     .tab {
-      background-color: #f6f4ec;
       color: #15284c;
       padding: 10px 20px;
       border-radius: 5px;
       display: inline-block;
       margin-top: 20px;
       text-decoration: none;
+    }
+    #datatable {
+      font-family: Poppins
+      border-collapse: collapse;
+      width: 100%;
+    }
+    #datatable td, #datatable th {
+      border: 1px solid #15284c;
+      padding: 8px;
+    }
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #15284c;
+      color: white;
     }
   </style>
 </head>
@@ -61,7 +76,7 @@
   <a href="#" class="tab">Release 1</a>
   <div class="box">
     <h2>Health Consumer</h2>
-    <table>
+    <table id="datatable">
       <tr><th>Data Element</th><th>Definition</th><th>Value Set</th></tr>
       <tr><td>NHI number</td><td>National health identifier for the patient or consumer</td><td>NHI number</td></tr>
     </table>
