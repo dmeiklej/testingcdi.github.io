@@ -36,7 +36,7 @@
       background-color: #f6f4ec;
       border-radius: 10px;
       padding: 20px;
-      margin-top: 20px;
+      margin: 20px auto; /* Center the box*/
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     .button {
@@ -51,21 +51,22 @@
       border-radius: 4px;
       text-decoration: none;
     }
-    #datatable {
+    table {
       font-family: Poppins
       border-collapse: collapse;
       width: 100%;
+      margin: 20px; /* Space between box and table */
     }
-    #datatable td, #datatable th {
-      border: 1px solid #15284c;
-      padding: 8px;
+    table, td, th {
+      border: 1px solid #15284c; /* Border color for table cells */
     }
-    #customers th {
-      padding-top: 12px;
-      padding-bottom: 12px;
+    th, td {
+      padding: 10px;
       text-align: left;
-      background-color: #15284c;
-      color: #f6f4ec;
+    }
+    th {
+      background-color: #15284c; /* Background color for table header cells */
+      color: #f6f4ec; /* Text color for table header cells */
     }
   </style>
 </head>
@@ -80,7 +81,7 @@
   <h2>Release 1 for comment</h2>
   <div class="box">
     <h2>Health Consumer</h2>
-    <table id="datatable">
+    <table>
       <tr><th>Data Element</th><th>Definition</th><th>Value Set</th></tr>
       <tr><td>NHI number</td><td>National health identifier for the patient or consumer</td><td>NHI number</td></tr>
     </table>
