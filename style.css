@@ -1,6 +1,7 @@
 body {
   margin: 0;
   background-image: src=('https://github.com/dmeiklej/testingcdi.github.io/blob/main/Teams%20BG.jpg');
+  background-color: #15284c
   height: 100vh;
   font-family: 'Poppins';
   font-size: 14px;
