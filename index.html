@@ -21,6 +21,7 @@
     .header {
       width: 70%;
       padding: 20px:
+      margin: 8px;
     }
     h1 {
       font-size: 4em;
@@ -101,7 +102,13 @@
       <thead><tr><th>Data Element</th><th>Definition</th><th>Value Set</th></tr></thead>
       <tbody><tr><td>NHI number</td><td>National health identifier for the patient or consumer</td><td>NHI number</td></tr>
       <tr><td>Person name</td><td>Current full name of the patient or consumer</td><td></td></tr>
-      <tr><td>Birth date</td><td>Date of birth of the patient or consumer</td><td>Date</td></tr>
+      <tr><td>Birth date</td><td>Date of birth of the patient or consumer</td><td>Valid Date</td></tr>
+      <tr><td>Gender code</td><td>Coded gender of the patient or consumer</td><td><a href="url">http://hl7.org/fhir/ValueSet/administrative-gender</a></td></tr>
+      <tr><td>Gender description</td><td>Person's own description of gender, if coded as 'another gender'</td><td>Free Text</td></tr>
+      <tr><td>Physical address</td><td>Current physical address for the patient or consumer</td><td>Free Text</td></tr>
+      <tr><td>Phone number</td><td>Current contact phone number for the patient or consumer</td><td>Free Text</td></tr>
+      <tr><td>Email address</td><td>Current contact email address for the patient or consumer</td><td>Valid email address in local-part@domain format</td></tr>
+      <tr><td>Ethnic group code</td><td>Set of ethnic group codes describing the person’s ethnicity</td><td><a href="url">https://nzhts.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code</a></td></tr>
     </tbody></table>
     </div>
   </div>
