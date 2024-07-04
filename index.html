@@ -100,7 +100,29 @@
   <h3 style="float: right;">Release 1 for comment</h3>
   <div class="box">
     <h3>Health Consumer</h3>
-    <p style="color: #15284c;">Primary Level</p>
+    <p style="color: #15284c; text-align: left;">Primary Level</p>
+    <div><table>
+      <thead><tr><th>Data Element</th><th>Definition</th><th>Code System</th><th>Value Set</th></tr></thead>
+      <tbody><tr><td>NHI number</td><td>National health identifier for the patient or consumer</td><td></td><td>NHI number</td></tr>
+      <tr><td>Person name</td><td>Current full name of the patient or consumer</td><td></td><td></td></tr>
+      <tr><td>Birth date</td><td>Date of birth of the patient or consumer</td><td></td><td>Valid Date</td></tr>
+      <tr><td>Gender code</td><td>Coded gender of the patient or consumer</td><td>SNOMED CT NZ</td><td><a href="url">hl7.org/fhir/valueset-administrative-gender.html</a></td></tr>
+      <tr><td>Gender description</td><td>Person's own description of gender, if coded as 'another gender'</td><td></td><td>Free Text</td></tr>
+      <tr><td>Physical address</td><td>Current physical address for the patient or consumer</td><td></td><td>Free Text</td></tr>
+      <tr><td>Phone number</td><td>Current contact phone number for the patient or consumer</td><td></td><td>Free Text</td></tr>
+      <tr><td>Email address</td><td>Current contact email address for the patient or consumer</td><td></td><td>Valid email address in local-part@domain format</td></tr>
+      <tr><td>Ethnic group code</td><td>Set of ethnic group codes describing the person’s ethnicity</td><td>Aria Level 4 Ethnicity codes</td><td><a href="url">https://nzhts.digital.health.nz/fhir/ValueSet/ethnic-group-level-4-code</a></td></tr>
+      <tr><td>Preferred language code</td><td>Code for the person's preferred language for communication</td><td>ISO 639-3</td><td><a href="url">http://hl7.org/fhir/ValueSet/languages</a></td></tr>
+      <tr><td>M&amacr;ori descent code</td><td>Code indicating whether the person is of M&amacr;ori descent</td><td>Stats NZ M&amacr;ori Descent</td><td><a href="url">https://nzhts.digital.health.nz/fhir/ValueSet/maori-descent</a></td></tr>
+      <tr><td>Iwi code</td><td>Set of codes for a person's iwi affiliation</td><td>NZ Iwi</td><td><a href="url">https://nzhts.digital.health.nz/fhir/ValueSet/iwi-code</a></td></tr>
+      <tr><td>Birth country code</td><td>Code for the person's country of birth</td><td>ISO 3166-1</td><td><a href="url">http://hl7.org/fhir/ValueSet/iso3166-1-2</a></td></tr>
+      <tr><td>Residential country code</td><td>Code for the person's current country of residence</td><td>ISO 3166-1</td><td><a href="url">http://hl7.org/fhir/ValueSet/iso3166-1-2</a></td></tr>
+    </tbody></table>
+    </div>
+  </div>
+<div class="box">
+    <h3>Health Consumer</h3>
+    <p style="color: #15284c; text-align: left;">Secondary Level</p>
     <div><table>
       <thead><tr><th>Data Element</th><th>Definition</th><th>Code System</th><th>Value Set</th></tr></thead>
       <tbody><tr><td>NHI number</td><td>National health identifier for the patient or consumer</td><td></td><td>NHI number</td></tr>
