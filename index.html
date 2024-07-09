@@ -56,36 +56,10 @@
     }
    .box {
       background-color: #f6f4ec;
-      max-height: 0;
       border-radius: 10px;
       padding: 20px;
       margin: 20px auto; /* Center the box*/
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: max-height 0.2s ease-out;
-    }
-    .collapsible {
-      background-color: #f6f4ec;
-      font-family: Poppins;
-      border-radius: 10px;
-      padding: 20px;
-      width: 100%;
-      margin: 20px auto; /* Center the box*/ 
-      text-align: left;
-      cursor: pointer;
-    }
-    .active, .collapsible:hover {
-      background-color: #CBC7B8;
-    }
-    .collapsible:after {
-      content: '\002B';
-      color: #15284c;
-      font-weight: bold;
-      float: right;
-      margin-left: 5px;
-    }
-    .active:after {
-      content: "\2212";
     }
     .release1button {
       background-color: #f6f4ec;
@@ -158,8 +132,8 @@
     <a href="#"><b>Smoking</b><br><p style="color: #15284c; text-align: left; font-size: 14px;">Outlines data elements regarding smoking status</p></a>
     <a href="#"><b>Vaping</b><p style="color: #15284c; text-align: left; font-size: 14px;">Outlines data elements regarding vaping status</p></a>
   </div>
-  <button class="collapsible"; id="healthconsumer"><h3>Health Consumer</h3></button>
   <div class="box">
+    <h3 id="healthconsumer">Health Consumer</h3>
     <p style="color: #15284c; text-align: left;">Primary Level</p>
     <div><table>
       <thead><tr><th>Data Element</th><th>Definition</th><th>Code System</th><th>Value Set</th></tr></thead>
@@ -180,50 +154,67 @@
     </tbody></table>
     </div>
   </div>
-  <button class="collapsible"; id="condition"><h3>Condition</h3></button>
   <div class="box">
+    <h3 id="condition">Condition</h3>
     <div><table>
       <thead><tr><th>Data Element</th><th>Definition</th><th>Code System</th><th>Value Set</th></tr></thead>
-      <tbody><tr><td>Condition code</td><td>Code representing the problem or condition</td><td></td><td></td></tr>
-      <tr><td>Body site code</td><td>Code for the body site affected by the problem (if applicable)</td><td></td><td><a href="http://hl7.org/fhir/uv/ips/ValueSet/body-site-uv-ips">http://hl7.org/fhir/uv/ips/ValueSet/body-site-uv-ips</a></td></tr>
+      <tbody><tr><td>Condition code</td><td>Code representing the problem or condition</td><td>SNOMED CT NZ</td><td></td></tr>
+      <tr><td>Body site code</td><td>Code for the body site affected by the problem (if applicable)</td><td>SNOMED CT NZ</td><td><a href="http://hl7.org/fhir/uv/ips/ValueSet/body-site-uv-ips">http://hl7.org/fhir/uv/ips/ValueSet/body-site-uv-ips</a></td></tr>
     </tbody></table>
     </div>
   </div>
-  <button class="collapsible"; id="medications">Medications</h3></button>
   <div class="box">
+    <h3 id="medications">Medications</h3>
     <div><table>
       <thead><tr><th>Data Element</th><th>Definition</th><th>Code System</th><th>Value Set</th></tr></thead>
-      <tbody><tr><td>Condition code</td><td>Code representing the problem or condition</td><td></td><td></td></tr>
-      <tr><td>Body site code</td><td>Code for the body site affected by the problem (if applicable)</td><td></td><td><a href="http://hl7.org/fhir/uv/ips/ValueSet/body-site-uv-ips">http://hl7.org/fhir/uv/ips/ValueSet/body-site-uv-ips</a></td></tr>
+      <tbody><tr><td>Medicinal product code</td><td>NZMT code for the non-trade medicinal product</td><td>NZMT mapped to SNOMED CT</td><td><a href="#">https://nzhts.digital.health.nz/fhir/ValueSet/nzmt-mp, https://nzhts.digital.health.nz/fhir/ValueSet/nzmt-mpuu, https://nzhts.digital.health.nz/fhir/ValueSet/nzmt-mpp</a></td></tr>
+      <tr><td>Medicinal trade product code</td><td>NZMT code for the trade medicinal product</td><td>NZMT mapped to SNOMED CT</td><td><a href="#">https://nzhts.digital.health.nz/fhir/ValueSet/nzmt-mp, https://nzhts.digital.health.nz/fhir/ValueSet/nzmt-mpuu, https://nzhts.digital.health.nz/fhir/ValueSet/nzmt-mpp</a></td></tr>
+      <tr><td>Medication indication code</td><td>Code for the problem or condition that is the indication for the medicine</td><td>SNOMED CT NZ</td><td><a href="http://hl7.org/fhir/ValueSet/medication-as-needed-reason">http://hl7.org/fhir/ValueSet/medication-as-needed-reason</a></td></tr>
     </tbody></table>
     </div>
   </div>
-  <button class="collapsible"; id="allergiesadversereaction">Allergies and Adverse Reactions</h3></button>
   <div class="box">
+    <h3 id="allergiesadversereaction">Allergies and Adverse Reactions</h3>
     <div><table>
       <thead><tr><th>Data Element</th><th>Definition</th><th>Code System</th><th>Value Set</th></tr></thead>
-      <tbody><tr><td>Condition code</td><td>Code representing the problem or condition</td><td></td><td></td></tr>
-      <tr><td>Body site code</td><td>Code for the body site affected by the problem (if applicable)</td><td></td><td><a href="http://hl7.org/fhir/uv/ips/ValueSet/body-site-uv-ips">http://hl7.org/fhir/uv/ips/ValueSet/body-site-uv-ips</a></td></tr>
+      <tbody><tr><td>Adverse reaction event agent code</td><td>Code for the causative agent of a recorded adverse reaction</td><td>SNOMED CT NZ</td><td><a href="http://hl7.org/fhir/uv/ips/ValueSet/allergy-intolerance-uv-ips">http://hl7.org/fhir/uv/ips/ValueSet/allergy-intolerance-uv-ips</a></td></tr>
+      <tr><td>Adverse reaction manifestation code</td><td>Code for a sign or symptom experienced with a given problem</td><td>SNOMED CT NZ</td><td><a href="http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-snomed-ct-ips-free-set">http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-snomed-ct-ips-free-set</a></td></tr>
+    </tbody></table>
+    </div>
+  </div>
+  <div class="box">
+    <h3 id="immunisations">Immunisations</h3>
+    <div><table>
+      <thead><tr><th>Data Element</th><th>Definition</th><th>Code System</th><th>Value Set</th></tr></thead>
+      <tbody><tr><td>Vaccine product type code</td><td>Code for the type of vaccine product administered</td><td>SNOMED CT NZ</td><td><a href="http://hl7.org/fhir/uv/ips/ValueSet/vaccines-uv-ips">http://hl7.org/fhir/uv/ips/ValueSet/vaccines-uv-ips</a></td></tr>
+      <tr><td>Vaccine product code</td><td>Non-trade medicinal product code for the vaccine administered</td><td>SNOMED CT NZ</td><td><a href="#">https://nzhts.digital.health.nz/fhir/ValueSet/nzmt-mp, https://nzhts.digital.health.nz/fhir/ValueSet/nzmt-mpuu</a></td></tr>
+      <tr><td>Vaccine trade product code</td><td>NZMT code for the vaccine trade product administered</td><td>SNOMED CT NZ</td><td><a href="#">https://nzhts.digital.health.nz/fhir/ValueSet/nzmt-tp, https://nzhts.digital.health.nz/fhir/ValueSet/nzmt-tpuu</a></td></tr>
+      <tr><td>CVX vaccine product code</td><td>CVX code for the vaccine product administered</td><td>CVX</td><td><a href="http://hl7.org/fhir/ValueSet/vaccine-code">http://hl7.org/fhir/ValueSet/vaccine-code</a></td></tr>
+      <tr><td>Vaccination date</td><td>Date the vaccine was administered</td><td></td><td>Valid Date</td></tr>
+      <tr><td>Vaccine GTIN</td><td>GTIN code for the vaccine product administered</td><td>GTIN</td><td><a href="http://terminology.hl7.org/ValueSet/v3-GTIN">http://terminology.hl7.org/ValueSet/v3-GTIN</a></td></tr>
+      <tr><td>Vaccine batch number</td><td>Lot/batch number for the vaccine product administered</td><td></td><td>String</td></tr>
+      <tr><td>Expiry date</td><td>Expiry date of the batch of the vaccine product administered</td><td></td><td>Valid Date</td></tr>
+    </tbody></table>
+    </div>
+  </div>
+  <div class="box">
+    <h3 id="smoking">Smoking</h3>
+    <div><table>
+      <thead><tr><th>Data Element</th><th>Definition</th><th>Code System</th><th>Value Set</th></tr></thead>
+      <tbody><tr><td>Smoking status code</td><td>Code for current smoking status</td><td>LOINC mapped to SNOMED CT NZ</td><td><a href="http://hl7.org/fhir/uv/ips/ValueSet/current-smoking-status-uv-ips">http://hl7.org/fhir/uv/ips/ValueSet/current-smoking-status-uv-ips</a></td></tr>
+      <tr><td>Smoking status recorded date</td><td>Date smoking status recorded</td><td>SNOMED CT NZ</td><td>Valid Date</td></tr>
+    </tbody></table>
+    </div>
+  </div>
+  <div class="box">
+    <h3 id="vaping">Vaping</h3>
+    <div><table>
+      <thead><tr><th>Data Element</th><th>Definition</th><th>Code System</th><th>Value Set</th></tr></thead>
+      <tbody><tr><td>Vaping status code</td><td>Code for current vaping status</td><td>SNOMED CT NZ</td><td><a href="https://nzhts.digital.health.nz/fhir/ValueSet/vaping-status">https://nzhts.digital.health.nz/fhir/ValueSet/vaping-status</a></td></tr>
+      <tr><td>Vaping status recorded date</td><td>Date vaping status recorded</td><td>SNOMED CT NZ</td><td>Valid Date</td></tr>
     </tbody></table>
     </div>
   </div>
 </div>
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var box = this.nextElementSibling;
-    if (box.style.maxHeight){
-      box.style.maxHeight = null;
-    } else {
-      box.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-</script>
 </body>
 </html>
