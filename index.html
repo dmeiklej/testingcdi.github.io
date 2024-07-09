@@ -60,20 +60,23 @@
       padding: 20px;
       margin: 20px auto; /* Center the box*/
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
     }
     .collapsible {
       background-color: #f6f4ec;
       border-radius: 10px;
       padding: 20px;
+      width: 100%;
       margin: 20px auto; /* Center the box*/      
       cursor: pointer;
     }
     .active, .collapsible:hover {
-      background-color: #555;
+      background-color: #CBC7B8;
     }
     .collapsible:after {
       content: '\002B';
-      color: white;
+      color: #15284c;
       font-weight: bold;
       float: right;
       margin-left: 5px;
