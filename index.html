@@ -124,16 +124,16 @@
   <a href="#" class="release1button"><b>Release 1</b></a>
   <h3 style="float: right;">Release 1 for comment</h3>
   <div class="button-group">
-    <a href="#"><b>Health Consumer</b><br><p style="color: #15284c; text-align: left; font-size: 14px;">Outlines data elements regarding an individual who intends to or has received healthcare services/products in New Zealand</p></a>
-    <a href="#"><b>Condition</b><br><p style="color: #15284c; text-align: left; font-size: 14px;">Outlines data elements regarding conditions or problems affecting the person</p></a>
-    <a href="#"><b>Medications</b><br><p style="color: #15284c; text-align: left; font-size: 14px;">Includes data elements about medications</p></a>
-    <a href="#"><b>Allergies and Adverse Reactions</b><br><p style="color: #15284c; text-align: left; font-size: 14px;">Data regarding each known allergy or propensity for adverse reactions to some substance</p></a>
+    <a href="healthconsumer"><b>Health Consumer</b><br><p style="color: #15284c; text-align: left; font-size: 14px;">Outlines data elements regarding an individual who intends to or has received healthcare services/products in New Zealand</p></a>
+    <a href="condition"><b>Condition</b><br><p style="color: #15284c; text-align: left; font-size: 14px;">Outlines data elements regarding conditions or problems affecting the person</p></a>
+    <a href="medications"><b>Medications</b><br><p style="color: #15284c; text-align: left; font-size: 14px;">Includes data elements about medications</p></a>
+    <a href="allergiesadversereaction"><b>Allergies and Adverse Reactions</b><br><p style="color: #15284c; text-align: left; font-size: 14px;">Data regarding each known allergy or propensity for adverse reactions to some substance</p></a>
     <a href="#"><b>Immunisations</b><br><p style="color: #15284c; text-align: left; font-size: 14px;">Includes data elements related to vaccinations</p></a>
     <a href="#"><b>Smoking</b><br><p style="color: #15284c; text-align: left; font-size: 14px;">Outlines data elements regarding smoking status</p></a>
     <a href="#"><b>Vaping</b><p style="color: #15284c; text-align: left; font-size: 14px;">Outlines data elements regarding vaping status</p></a>
   </div>
   <div class="box">
-    <h3>Health Consumer</h3>
+    <h3 id="healthconsumer">Health Consumer</h3>
     <p style="color: #15284c; text-align: left;">Primary Level</p>
     <div><table>
       <thead><tr><th>Data Element</th><th>Definition</th><th>Code System</th><th>Value Set</th></tr></thead>
@@ -154,8 +154,8 @@
     </tbody></table>
     </div>
   </div>
-<div class="box">
-    <h3>Condition</h3>
+  <div class="box">
+    <h3 id="condition">Condition</h3>
     <div><table>
       <thead><tr><th>Data Element</th><th>Definition</th><th>Code System</th><th>Value Set</th></tr></thead>
       <tbody><tr><td>Condition code</td><td>Code representing the problem or condition</td><td></td><td></td></tr>
@@ -163,6 +163,24 @@
     </tbody></table>
     </div>
   </div>
+  <div class="box">
+    <h3 id="medications">Medications</h3>
+    <div><table>
+      <thead><tr><th>Data Element</th><th>Definition</th><th>Code System</th><th>Value Set</th></tr></thead>
+      <tbody><tr><td>Condition code</td><td>Code representing the problem or condition</td><td></td><td></td></tr>
+      <tr><td>Body site code</td><td>Code for the body site affected by the problem (if applicable)</td><td></td><td><a href="http://hl7.org/fhir/uv/ips/ValueSet/body-site-uv-ips">http://hl7.org/fhir/uv/ips/ValueSet/body-site-uv-ips</a></td></tr>
+    </tbody></table>
+    </div>
   </div>
+  <div class="box">
+    <h3 id="allergiesadversereaction">Allergies and Adverse Reactions</h3>
+    <div><table>
+      <thead><tr><th>Data Element</th><th>Definition</th><th>Code System</th><th>Value Set</th></tr></thead>
+      <tbody><tr><td>Condition code</td><td>Code representing the problem or condition</td><td></td><td></td></tr>
+      <tr><td>Body site code</td><td>Code for the body site affected by the problem (if applicable)</td><td></td><td><a href="http://hl7.org/fhir/uv/ips/ValueSet/body-site-uv-ips">http://hl7.org/fhir/uv/ips/ValueSet/body-site-uv-ips</a></td></tr>
+    </tbody></table>
+    </div>
+  </div>
+</div>
 </body>
 </html>
