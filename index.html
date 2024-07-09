@@ -61,6 +61,26 @@
       margin: 20px auto; /* Center the box*/
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+    .collapsible {
+      background-color: #f6f4ec;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto; /* Center the box*/      
+      cursor: pointer;
+    }
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+    .collapsible:after {
+      content: '\002B';
+      color: white;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+    .active:after {
+      content: "\2212";
+    }
     .release1button {
       background-color: #f6f4ec;
       color: #15284c;
@@ -132,8 +152,8 @@
     <a href="#"><b>Smoking</b><br><p style="color: #15284c; text-align: left; font-size: 14px;">Outlines data elements regarding smoking status</p></a>
     <a href="#"><b>Vaping</b><p style="color: #15284c; text-align: left; font-size: 14px;">Outlines data elements regarding vaping status</p></a>
   </div>
+  <button class="collapsible"; id="healthconsumer"><h3>Health Consumer</h3></button>
   <div class="box">
-    <h3 id="healthconsumer">Health Consumer</h3>
     <p style="color: #15284c; text-align: left;">Primary Level</p>
     <div><table>
       <thead><tr><th>Data Element</th><th>Definition</th><th>Code System</th><th>Value Set</th></tr></thead>
@@ -182,5 +202,22 @@
     </div>
   </div>
 </div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var box = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
 </body>
 </html>
