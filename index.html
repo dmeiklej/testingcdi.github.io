@@ -56,6 +56,7 @@
     }
    .box {
       background-color: #f6f4ec;
+      max-height: 0;
       border-radius: 10px;
       padding: 20px;
       margin: 20px auto; /* Center the box*/
@@ -65,10 +66,12 @@
     }
     .collapsible {
       background-color: #f6f4ec;
+      font-family: Poppins;
       border-radius: 10px;
       padding: 20px;
       width: 100%;
-      margin: 20px auto; /* Center the box*/      
+      margin: 20px auto; /* Center the box*/ 
+      text-align: left;
       cursor: pointer;
     }
     .active, .collapsible:hover {
@@ -214,10 +217,10 @@ for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var box = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
+    if (box.style.maxHeight){
+      box.style.maxHeight = null;
     } else {
-      content.style.maxHeight = content.scrollHeight + "px";
+      box.style.maxHeight = content.scrollHeight + "px";
     } 
   });
 }
